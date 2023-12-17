@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100vw;
+  height: 80px;
+  color: #fefefe;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+
+/* logo  */
+.log {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+}
+
+
+/* hamburger icon */
+.hamburger .hamburger-icon {
+  font-size: 35px;
+  display: none;
+}
+
+
+/* hamburger close icon */
+.hamburger-close .hamburger-close-icon 
+{
+    font-size: 35px;
+    display: none;
+}
+
+
+/* navbar menu list  */
+/* here i made an another copy of list for small views i.e ===> .nav-bar-s 
+    in future remove it if you learn another way in js script curenlty i did bsed on my knowledge
+*/
+.nav-bar ul{
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-bar ul li ,.nav-bar-s ul li {
+  margin: 0 22px;
+}
+
+.nav-bar ul li a,.nav-bar-s ul li a {
+  color: white;
+  font-size: 19px;
+  padding: 5px 4px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.nav-bar ul li a.active ,.nav-bar-s ul li a.active{
+  border-bottom: 1.8px solid white;
+}
+
+
+.nav-bar ul li a:hover {
+  border-bottom: 1.8px solid white;
+}
+
+.nav-bar-s ul li a:hover {
+  border-bottom: 1.8px solid white;
+}
+
+
+/* small device view */
+
+/* by default small screen nav bar i put off later for small screen it on 
+
+NOTE: dont put this in top 
+*/
+.nav-bar-s ul {
+    display: none;
+}
+/* --------- */
+
+
+/* ------------------------------------------------------    992px      -------------------------------------------------- */
+
+
+@media only screen and (max-width: 992px) {
+  header {
+    padding: 0 30px;
+  }
+
+  .nav-bar ul li {
+    margin: 0 19px;
+  }
+}
+
+
+
+/* ------------------------------------------------------   768px      -------------------------------------------------- */
+
+
+
+ 
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0 40px;
+  }
+
+
+  /* icon for menu */
+  .hamburger .hamburger-icon {
+    display: block;
+    justify-self: end;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+
+
+  /* icon to close menu */
+  .hamburger-close{
+    display: none;
+  }
+
+  .hamburger-close
+  .hamburger-close-icon
+  {
+    display: block;
+    justify-self: end;
+  }
+
+  /* nav menu list */
+
+  .nav-bar {
+    display: none;
+  }
+
+
+  /* small devices */
+
+  .nav-bar-s ul{
+    display: flex;
+    list-style-type: none;
+  }
+
+  .nav-bar-s ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-bar-s {
+    display: none;
+    background-color: black;
+    width: 100vw;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+  }
+
+ 
+
+  .nav-bar-s ul li {
+    margin-bottom: 18px;
+  }
+}
